@@ -15,14 +15,20 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 public class Constants {
     public static FollowerConstants followerConstants = new FollowerConstants()
         // Zak put mass in later
-        .mass(0.0);
+            // Micah put in mass
+        .mass(9.661517);
 
-    public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1, 1);
+    public static PathConstraints pathConstraints = new PathConstraints(
+            0.99,
+            100,
+            1,
+            1
+    );
 
     public static PinpointConstants localizerConstants = new PinpointConstants()
             // Edit offsets and enc directions here
-            .forwardPodY(-5)
-            .strafePodX(0.5)
+            .forwardPodY(-6.5) //originally -5
+            .strafePodX(3.75) //originally 0.5
             .distanceUnit(DistanceUnit.INCH)
             .hardwareMapName("pinpoint")
             .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD)
