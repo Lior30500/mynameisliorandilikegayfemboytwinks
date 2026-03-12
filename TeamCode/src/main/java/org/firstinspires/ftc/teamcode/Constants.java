@@ -1,3 +1,4 @@
+
 package org.firstinspires.ftc.teamcode;
 
 import com.pedropathing.follower.Follower;
@@ -14,15 +15,20 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 public class Constants {
     public static FollowerConstants followerConstants = new FollowerConstants()
-        // Zak put mass in later
-        .mass(0.0);
+            // Zak put mass in later
+            .mass(9.661517);
 
-    public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1, 1);
+    public static PathConstraints pathConstraints = new PathConstraints(
+            0.99,
+            100,
+            1,
+            1
+    );
 
     public static PinpointConstants localizerConstants = new PinpointConstants()
             // Edit offsets and enc directions here
-            .forwardPodY(-5)
-            .strafePodX(0.5)
+            .forwardPodY(-6.5) //originally -5
+            .strafePodX(3.75) //originally 0.5
             .distanceUnit(DistanceUnit.INCH)
             .hardwareMapName("pinpoint")
             .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD)
@@ -30,20 +36,20 @@ public class Constants {
             .strafeEncoderDirection(GoBildaPinpointDriver.EncoderDirection.FORWARD);
 
     public static MecanumConstants driveConstants = new MecanumConstants()
-        .maxPower(1)
-        // Edit directions and configs if needed @zak
-        .rightFrontMotorName("rf")
-        .rightRearMotorName("rr")
-        .leftRearMotorName("lr")
-        .leftFrontMotorName("lf")
-        .leftFrontMotorDirection(DcMotorSimple.Direction.REVERSE)
-        .leftRearMotorDirection(DcMotorSimple.Direction.REVERSE)
-        .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
-        .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
-        // Edit these velocities here
-        .xVelocity(0.0)
-        .yVelocity(0.0);
-        // Edit dese amounts
+            .maxPower(1)
+            // Edit directions and configs if needed @zak
+            .rightFrontMotorName("rf")
+            .rightRearMotorName("rr")
+            .leftRearMotorName("lr")
+            .leftFrontMotorName("lf")
+            .leftFrontMotorDirection(DcMotorSimple.Direction.REVERSE)
+            .leftRearMotorDirection(DcMotorSimple.Direction.REVERSE)
+            .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
+            .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
+            // Edit these velocities here
+            .xVelocity(0.0)
+            .yVelocity(0.0);
+    // Edit dese amounts
 //        .forwardZeroPowerAcceleration(0.0)
 //        .lateralZeroPowerAcceleration(0.0)
 
